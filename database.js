@@ -1,8 +1,9 @@
 const database = {}
+const dbUrl = require('./dbInfo')
 
 database.connect = async () =>{
     const MongoClient = require('mongodb').MongoClient;
-    const url = "mongodb+srv://admin:admin@cluster0.hqbgj.mongodb.net/parkingApi?retryWrites=true&w=majority"
+    const url = dbUrl
     const dbName = 'parkingApi'
     let db
 
